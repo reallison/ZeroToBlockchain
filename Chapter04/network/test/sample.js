@@ -612,7 +612,7 @@ describe('Finance Network', function () {
                 .then((newOrder) => {
                     newOrder.buyer.$identifier.should.equal(buyerID);
                     newOrder.$identifier.should.equal(orderNo);
-
+                    
                     orderNow.order = factory.newRelationship(NS, 'Order', newOrder.$identifier);
                     orderNow.seller = factory.newRelationship(NS, 'Seller', newOrder.seller.$identifier);
                     orderNow.buyer = factory.newRelationship(NS, 'Buyer', newOrder.buyer.$identifier);
